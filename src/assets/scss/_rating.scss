@@ -1,0 +1,16 @@
+/* Rating Area Style
+============================================*/
+.rating {
+    display: inline-block;
+    cursor: pointer;
+    i {
+        color: #dddddd;
+        font-size: 20px;
+        transition: var(--transition);
+    }
+    &.active {
+        i {
+            color: #f7d700;
+        }
+    }
+}

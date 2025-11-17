@@ -1,0 +1,73 @@
+/*
+@File: Vaxo Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the template.
+
+This files table contents are outlined below>>>>>
+
+******************************************* 
+** - DEFAULT AREA STYLE - **
+
+** - Default Btn Area Style
+** - Read More Area Style
+** - Section Title Area Style
+
+** - OTHERS STYLE AREA
+
+*******************************************
+*/
+
+/** Variables **/
+@import "../../assets/scss/variables";
+
+/** Global **/
+@import "../../assets/scss/global";
+
+/** Preloader **/
+@import "../../assets/scss/preloader";
+
+/** Sidebar Menu **/
+@import "../../assets/scss/sidebar-menu";
+
+/** Header Menu **/
+@import "../../assets/scss/header";
+
+/** Card **/
+@import "../../assets/scss/card";
+
+/** All Table **/
+@import "../../assets/scss/all-table";
+
+/** Activity **/
+@import "../../assets/scss/activity";
+
+/** Project Chat Calendar **/
+@import "../../assets/scss/project-chat-calendar";
+
+/** Active Budget **/
+@import "../../assets/scss/active-budget";
+
+/** Locations Visitors Transaction **/
+@import "../../assets/scss/locations-visitors-transaction";
+
+/** User Visits Gender **/
+@import "../../assets/scss/user-visits-gender";
+
+/** CRM **/
+@import "../../assets/scss/crm";
+
+/** FAQ **/
+@import "../../assets/scss/faq";
+
+/** Rating **/
+@import "../../assets/scss/rating";
+
+/** Calendar **/
+@import "../../assets/scss/calendar";
+
+/** Timeline **/
+@import "../../assets/scss/timeline";
+
+/** Dark Mode **/
+@import "../../assets/scss/dark-mode";

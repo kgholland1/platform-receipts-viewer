@@ -1,0 +1,76 @@
+/*
+FAQ Area CSS
+============================================*/
+.faq-accordion-wrap {
+	max-width: 870px;
+	margin: auto;
+	.accordion-item {
+		background-color: transparent;
+		padding: 0;
+		border: none;
+		border-bottom: 1px solid #EFEFFE;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.accordion-header {
+			h6 {
+				margin-bottom: 0;
+			}
+			.accordion-button {
+				background-color: transparent;
+				border: none;
+				color: var(--headingColor);
+				font-size: 14px;
+				font-weight: 500;
+				transition: var(--transition);
+				font-family: var(--headingFontFamily);
+                padding: 25px 0;
+				&:focus {
+					box-shadow: none;
+				}
+				&::after {
+					content: "\ea13";
+					font-family: remixicon!important;
+					background-image: unset;
+					width: 35px;
+					height: 35px;
+					line-height: 35px;
+					text-align: center;
+					border-radius: 50px;
+                    font-size: 20px;
+				}
+				&:not(.collapsed) {
+					padding-bottom: 5px;
+                    color: var(--mainColor);
+					&::after {
+						content: "\f1af";
+						font-family: remixicon!important;
+						background-image: unset;
+						transform: rotate(360deg);
+						color: var(--mainColor);
+					}
+					&:focus {
+						box-shadow: none;
+					}
+				}
+				&:not(.collapsed) {
+					box-shadow: none;
+				}
+			}
+		}
+		.accordion-body {
+			padding: 20px 0;
+			padding-top: 0;
+			p {
+				color: #7A7A7A;
+                font-size: 14px;
+			}
+		}
+		&:last-of-type {
+			border-radius: 0;
+		}
+		&:first-of-type {
+			border-radius: 0;
+		}
+	}
+}

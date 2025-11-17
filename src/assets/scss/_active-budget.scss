@@ -1,0 +1,203 @@
+/* Active Projects Area Style
+============================================*/
+.active-projects-content {
+    .nav-tabs {
+        text-align: center;
+        display: block !important;
+        border-color: rgba(92, 97, 242, 0.25);
+        .nav-item {
+            display: inline-block;
+            margin: 0 25px;
+            .nav-link {
+                border: none;
+                position: relative; 
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 13px;
+                font-size: 14px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: var(--mainColor);
+                    transition: var(--transition);
+                }
+                &:hover {
+                    border: none;
+                    position: relative;
+                }
+                &.active {
+                    border: none;
+                    background-color: transparent;
+                    color: var(--headingColor) !important;
+                    &::before {
+                        width: 100%;
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .edit-trash {
+        i {
+            width: 16px;
+            stroke: #818093;
+            transition: var(--transition);
+            &:hover {
+                stroke: #ca343b;
+            }
+        }
+    }
+    .step-content {
+        li {
+            width: 25%;
+            flex: 0 0 auto;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 34%;
+                transform: translateY(-34%);
+                right: -100px;
+                width: 100%;
+                border-bottom: 1px solid rgba(92, 97, 242, 0.25);
+            }
+            span {
+                background-color: #EFEFFE;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50px;
+                display: inline-block;
+                position: relative;
+                transition: var(--transition);
+                border: 1px solid rgba(92, 97, 242, 0.25);
+                &.active {
+                    background-color: var(--mainColor);
+                    border-color: var(--mainColor);
+                }
+            }
+            &:last-child {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .progress {
+        position: relative;
+        background-color: #E9EFFC;
+        .progress-bar {
+            background-color: var(--mainColor);
+            span {
+                position: absolute;
+                top: -28px;
+                right: 0;
+            }
+        }
+        .zero {
+            position: absolute;
+            top: -28px;
+            left: 0;
+        }
+    }
+    
+}
+
+.progress-example {
+    .step-content {
+        li {
+            width: 25%;
+            flex: 0 0 auto;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 34%;
+                transform: translateY(-34%);
+                margin: auto;
+                width: 100%;
+                border-bottom: 1px solid rgba(92, 97, 242, 0.25);
+            }
+            span {
+                background-color: #EFEFFE;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50px;
+                display: inline-block;
+                position: relative;
+                transition: var(--transition);
+                border: 1px solid rgba(92, 97, 242, 0.25);
+                &.active {
+                    background-color: var(--mainColor);
+                    border-color: var(--mainColor);
+                }
+            }
+            &:last-child {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .active-projects-content {
+        .step-content {
+            li {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .activity-list {
+        li {
+            &::before {
+                top: 5px;
+                transform: unset;
+            }
+        }
+    }
+    .active-projects-content {
+        .nav-tabs {
+            .nav-item {
+                margin: 0 10px;
+            }
+        }
+        .step-content {
+            li {
+                p {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    .active-projects-content {
+        .step-content {
+            li {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,186 @@
+/* Timeline Area Style
+============================================*/
+.timeline-wrap-01 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 15px;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        border: 1px dashed var(--mainColor);
+        height: calc(100% / 5 * 4);
+    }
+    .timeline-item {
+        display: flex;
+        .text {
+            flex: 1 1 calc(50% - 50px);
+            position: relative;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        }
+        .icon {
+            flex: 1 1 100px;
+            div {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                margin: auto;
+                background: var(--mainColor);
+                box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+                position: relative;
+                z-index: 1;
+            }
+            &.green {
+                div {
+                    background: var(--successColor);
+                }
+            }
+        }
+        .time {
+            flex: 1 1 calc(50% - 50px);
+        }
+        &:nth-child(even) {
+            text-align: start;
+        }
+        &:nth-child(even) > div:last-child {
+            flex-direction: row-reverse;
+        }
+    }
+}
+.timeline-wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 15px;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        border: 1px dashed var(--mainColor);
+        height: calc(100% / 5 * 4);
+    }
+    .timeline-item {
+        display: flex;
+        .text {
+            flex: 1 1 calc(50% - 50px);
+            position: relative;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        }
+        .icon {
+            flex: 1 1 100px;
+            div {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                margin: auto;
+                background: var(--mainColor);
+                box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+                position: relative;
+                z-index: 1;
+            }
+            &.green {
+                div {
+                    background: var(--successColor);
+                }
+            }
+        }
+        .time {
+            flex: 1 1 calc(50% - 50px);
+        }
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        &:nth-child(even) > div:last-child {
+            text-align: end;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+    .timeline-wrap-01 {
+        &::before {
+            display: none;
+        }
+        .timeline-item {
+            flex-flow: column wrap;
+            height: auto;
+            &:nth-child(even) {
+                flex-direction: column;
+            }
+            &:nth-child(even) > .time:last-child {
+                text-align: start;
+            }
+            &:nth-child(odd) {
+                h3 {
+                    &::after {
+                        border: none;
+                    }
+                }
+            }
+            .icon {
+                order: 1;
+                flex: 1 1 100%;
+                width: 100px;
+                div {
+                    display: none;
+                }
+            }
+            .time {
+                order: 2;
+                flex: 1 1 50px;
+                width: calc(100% - 100px);
+            }
+            .text {
+                order: 3;
+                flex: 1 1 calc(100% - 50px);
+                width: calc(100% - -1px);
+            }
+        }
+    }
+    .timeline-wrap {
+        &::before {
+            display: none;
+        }
+        .timeline-item {
+            flex-flow: column wrap;
+            height: auto;
+            &:nth-child(even) {
+                flex-direction: column;
+            }
+            &:nth-child(even) > .time:last-child {
+                text-align: start;
+            }
+            &:nth-child(odd) {
+                h3 {
+                    &::after {
+                        border: none;
+                    }
+                }
+            }
+            .icon {
+                order: 1;
+                flex: 1 1 100%;
+                width: 100px;
+                div {
+                    display: none;
+                }
+            }
+            .time {
+                order: 2;
+                flex: 1 1 50px;
+                width: calc(100% - 100px);
+            }
+            .text {
+                order: 3;
+                flex: 1 1 calc(100% - 50px);
+                width: calc(100% - -1px);
+            }
+        }
+    }
+}

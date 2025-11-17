@@ -1,0 +1,47 @@
+/* Chat List Wrap Area Style
+============================================*/ 
+.get-user-list {
+    li {
+        position: relative;
+        padding-left: 14px;
+        cursor: pointer;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 7px;
+            height: 7px;
+            background-color: #5C61F2;
+        }
+        &:nth-child(2) {
+            &::before {
+                background-color: #989DFF;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-color: #CACFFF;
+            }
+        }
+    }
+}
+.source-table {
+    .icon {
+        width: 40px;
+        height: 40px;
+        line-height: 52px;
+        border-radius: 40px;
+        background-color: #EFEFFE;
+        text-align: center;
+        i {
+            width: 20px;
+            color: var(--mainColor);
+        }
+    }
+    .table>:not(caption)>*>* {
+        padding: 14px 30px;
+        border-color: #efeffe;
+    }
+}

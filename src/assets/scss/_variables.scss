@@ -1,0 +1,75 @@
+/*
+Default Style
+============================*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+	--bodyFontFamily: 'Inter', sans-serif;
+	--bodyColor: #919AA3;
+	--mainColor: #5C61F2;
+	--mainColor01: rgba(92, 97, 242, 0.1);
+	--headingColor: #171825;
+	--whiteColor: #ffffff;
+	--blackColor: #000000; 
+	--bodyBgColor: #f4f6fb; 
+	--dangerColor: #ED4C5C; 
+	--dangerColor01: rgba(237, 76, 92, 0.1); 
+	--successColor: #2ED47E; 
+	--successColor01: rgba(46, 212, 126, 0.1); 
+	--warningColor: #FFBA5C; 
+	--warningColor01: rgba(255, 186, 92, 0.1); 
+	--infoColor: #0dcaf0; 
+	--infoColor01: rgba(13, 202, 240, 0.1); 
+	--secondaryColor: #6c757d; 
+	--secondaryColor01: rgba(108, 117, 125, 0.1); 
+	--fontSize: 12px;
+	--fontSize13: 13px;
+	--fontSize14: 14px; 
+	--fontSize15: 15px;
+	--fontSize16: 16px;
+	--fontSize17: 17px;
+	--fontSize18: 18px;
+	--fontSize19: 19px;
+	--fontSize20: 20px;
+	--fontSize21: 21px;
+	--fontSize22: 22px;
+	--fontSize23: 23px;
+	--fontSize24: 24px;
+	--fontSize25: 25px;
+	--fontSize26: 26px;
+	--fontSize27: 27px;
+	--fontSize28: 28px;
+	--fontSize29: 29px;
+	--fontSize30: 30px;
+	--transition: all ease .5s;
+	--borderRadius: 10px;
+	--boxShadow: 0px 5px 20px 0px rgba(92, 97, 242, 0.20);
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+	
+	:root {
+		--fontSize18: 16px;
+		--fontSize30: 25px;
+	}
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    :root {
+		--fontSize18: 16px;
+	}
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+	:root {
+		--fontSize18: 16px;
+	}
+
+}

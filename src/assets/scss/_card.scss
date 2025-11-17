@@ -1,0 +1,273 @@
+/* card Title Area Style
+============================================*/
+.card-title {
+    .week-list {
+        margin-bottom: 0;
+        li {
+            margin-right: 1px;
+            .nav-link {
+                display: inline-block;
+                background-color: #F4F6FA;
+                padding: 5px 20px;
+                transition: var(--transition);
+                cursor: pointer;
+                &.active {
+                    background-color: var(--mainColor);
+                    color: var(--whiteColor) !important;
+                }
+                &:hover {
+                    background-color: var(--mainColor);
+                    color: var(--whiteColor) !important;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .form-select {
+        box-shadow: none;
+        font-size: 14px;
+        color: var(--bodyColor);
+        cursor: pointer;
+        width: 110px;
+        background-position: right;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .src-form {
+        .form-control {
+            padding-left: 40px;
+            width: 340px;
+        }
+        i {
+            left: 15px !important;
+            width: 20px;
+            color: var(--bodyColor);
+        }
+    }
+    .legend-list {
+        li {
+            position: relative;
+            padding-left: 12px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 7px;
+                height: 7px;
+                left: 0;
+                background-color: var(--successColor);
+            }
+            &:nth-child(2) {
+                &::before {
+                    background-color: var(--warningColor);
+                }
+            }
+            &:nth-child(3) {
+                &::before {
+                    background-color: var(--dangerColor);
+                }
+            }
+        }
+    }
+}
+
+/* Progress List Area Style
+============================================*/
+.progress-list {
+    line-height: 1;
+    li {
+        border-left: 2px solid var(--successColor);
+        padding-left: 9px;
+        &:nth-child(2) {
+            border-color: var(--warningColor);
+        }
+        &:nth-child(3) {
+            border-color: var(--dangerColor);
+        }
+    }
+}
+.user-device {
+    line-height: 1;
+    li {
+        border-left: 2px solid var(--mainColor);
+        padding-left: 9px;
+        &:nth-child(2) {
+            border-color: var(--mainColor);
+        }
+        &:nth-child(3) {
+            border-color: var(--mainColor);
+        }
+    }
+}
+
+/* eCommerce Area Style
+============================================*/
+.e-commerce-card {
+    .commerce-status {
+        display: block;
+        line-height: 1;
+        padding: 4px 5px 2px 2px;
+        i {
+            width: 12px;
+            height: 12px;
+            position: relative;
+            top: 0;
+        }
+    }
+    .form-select {
+        box-shadow: none;
+        font-size: 14px;
+        color: var(--bodyColor);
+        cursor: pointer;
+        width: 110px;
+        background-position: right;
+        padding-right: 0;
+    }
+}
+
+.legend-list2 {
+    li {
+        position: relative;
+        padding-left: 12px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 7px;
+            height: 7px;
+            left: 0;
+            background-color: var(--mainColor);
+        }
+        &:nth-child(2) {
+            &::before {
+                background-color: #7A7FFF;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                background-color: #989DFF;
+            }
+        }
+    }
+    &.two {
+        li {
+            &:nth-child(1) {
+                &::before {
+                    background-color: #B6BBFF !important;
+                }
+            }
+            &:nth-child(2) {
+                &::before {
+                    background-color: #CACFFF !important;
+                }
+            }
+            &:nth-child(3) {
+                &::before {
+                    background-color: #484DDE !important;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .card-title {
+        .src-form {
+            .form-control {
+                width: 100%;
+            }
+        }
+        .week-list {
+            li {
+                .nav-link {
+                    font-size: 12px;
+                    padding: 5px 5px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    #new_vs_returning {
+        display: table;
+        margin: auto;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    #new_vs_returning {
+        display: inline-block;
+        margin: unset;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .card-title {
+        .src-form {
+            .form-control {
+                width: 290px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .card-title {
+        .week-list {
+            li {
+                .nav-link {
+                    padding: 5px 3px;
+                }
+            }
+        }
+        .src-form {
+            .form-control {
+                width: 285px;
+            }
+        }
+    }
+
+}
+
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .card-title {
+        .week-list {
+            li {
+                .nav-link {
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+    .progress-list {
+        li {
+            padding-left: 5px;
+        }
+    }
+
+    .e-commerce-card-area {
+        .col-xxl-6  {
+            width: 100%;
+        }
+    }
+}

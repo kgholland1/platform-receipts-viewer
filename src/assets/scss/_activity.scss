@@ -1,0 +1,54 @@
+/** Header Area
+===================================**/
+.activity-list {
+    padding-bottom: 7px;
+    li {
+        position: relative;
+        padding-left: 156px;
+        margin-bottom: 41px;
+        z-index: 1;
+        &::before {
+            content: url(../../assets/images/ring.png);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 115px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -46px;
+            left: 120.5px;
+            width: 5px;
+            height: 88px;
+            background-color: #EFEFFE;
+            z-index: -1;
+        }
+        .date-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            span {
+                display: block;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .card-title {
+        .week-list {
+            li {
+                .nav-link {
+                    padding: 5px 3px;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,215 @@
+/* Chat List Wrap Area Style
+============================================*/
+.chat-list-wrap {
+    .chat {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        p {
+            border-radius: 0px 0px 0px 15px;
+            background-color: #F4F6FA;
+            padding: 5px 12px;
+            display: inline-block;
+            margin-right: 60px;
+        }
+        &.me {
+            text-align: right;
+            p {
+                margin-left: 30px;
+                margin-right: 0;
+                border-radius: 15px 0px 15px 15px;
+            }
+        }
+    }
+}
+.user-chat-form {
+    margin-top: 28px;
+    .form-control {
+        border-radius: 50px;
+        height: 40px;
+    }
+}
+
+/* Calendar Area Style
+============================================*/
+.calendar {
+    #calendari {
+        margin: 15px 0;
+        position: relative;
+        overflow: hidden;
+        height: 310px;
+        width: 100%;
+        font-size: 14px;
+        
+    }
+    table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+     
+    }
+    td {
+        text-align: center;
+        &:last-child {
+            border-right: none;
+            >span {
+                color: var(--dangerColor);
+            }
+        }
+        >span {
+            color: var(--headingColor);
+            display: block;
+            border: 2px solid transparent;
+            width: 43px;
+            height: 43px;
+            line-height: 39px;
+            border-radius: 50px;
+            margin: auto;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            font-size: 18px;
+            &:hover {
+                background: #2ED47E;
+                color: var(--whiteColor);
+            }
+        }
+        &:nth-child(6) {
+            >span {
+                color: var(--dangerColor);
+            }
+        }
+    }
+    th {
+        text-align: center;
+        padding: 10px;
+        font-weight: normal;
+        color: var(--headingColor);
+        font-size: 18px;
+        &:last-child {
+            border-right: none;
+        }
+        .any {
+            font-weight: normal;
+            display: inline-block;
+            text-shadow: none;
+            color: var(--headingColor);
+            font-weight: 500;
+            font-size: 18px;
+            margin-left: 5px;
+        }
+    }
+    tr {
+        &:first-child {
+            th {
+                font-size: 18px;
+                font-weight: 500;
+                border-left: none;
+                border-top: none;
+            }
+        }
+        &:nth-child(2) {
+            th {
+                padding: 5px;
+            }
+        }
+    }
+    td {
+        &.avui {
+            >span {
+                font-weight: 400;
+                background-color: #2ED47E;
+                color: var(--whiteColor);
+            }
+        }
+        &.fora {
+            >span {
+                opacity: 0.2;
+            }
+        }
+    }
+    .boto-next, .boto-prev {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        padding-left: 13px;
+        border: none;
+        background: transparent;
+        &::before {
+            content: url(../../assets/images/icons/chevron-right.svg);
+        }
+    }
+    .boto-prev {
+        right: auto;
+        left: 5px;
+        &::before {
+            content: url(../../assets/images/icons/chevron-left.svg);
+        }
+    }
+}
+#project_distribution {
+    display: table;
+    margin: auto;
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .calendar {
+        th {
+            font-size: 12px;
+        }
+        #calendari {
+            margin-bottom: 0;
+        }
+        .boto-next, .boto-prev {
+            top: 10px;
+        }
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+	.project-user-calendar {
+        .col-lg-12 {
+            width: 100%;
+        }
+        .col-lg-6 {
+            width: 50%;
+        }
+        .col-lg-6 {
+            width: 50%;
+        }
+    }
+    .calendar {
+        th {
+            font-size: 15px;
+        }
+        .boto-next, .boto-prev {
+            top: 9px;
+        }
+    }
+ 
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1860px) {
+
+    .chat-grid {
+        .col-lg-5.col-xxl-3.col-md-6 {
+            width: 35%;
+        }
+        .col-lg-7.col-xxl-9.col-md-6 {
+            width: 65%;
+        }
+    }
+
+}
