@@ -54,6 +54,7 @@ const createAxiosInstance = (baseURL: string): AxiosInstance => {
       }
       if (error.response?.status === 401) {
         authStore.clearToken()
+        window.location.replace('/')
       }
       return Promise.reject(error)
     }

@@ -16,3 +16,27 @@ export type ApiBlobResult = {
   blob: Blob | null,
   success: boolean
 }
+
+export type AgencyLookup = {
+  id: number,
+  name: string
+}
+
+export type QueryFilter = {
+  agencyId?: number,
+  receiptNumber?: string,
+  agencyReference?: string,
+  startDate?: string,
+  endDate?: string,
+  pageSize: number,
+  pageNumber: number
+}
+
+export type PaginationMetadata = {
+  currentPage: number;
+  itemsPerPage: number;
+  totalItems: number;
+  totalPages: number;
+  previousPageLink?: string;
+  nextPageLink?: string;
+}

@@ -64,7 +64,7 @@
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="javascript:;"  @click="download(doc.receiptNumber)">
+                      <a class="dropdown-item" href="javascript:;" @click="download(doc.receiptNumber)">
                         <vue-feather type="printer"></vue-feather>
                         Download
                       </a>
@@ -92,7 +92,7 @@
         </div>
 
         <div class="offcanvas-body">
-          <ReceiptDetail v-if="receiptData" :receipt-data="receiptData"/>
+          <ReceiptDetail v-if="receiptData" :receipt-data="receiptData" />
         </div>
       </div>
       <!-- End Default Offcanvas From Area -->
@@ -129,10 +129,10 @@ const viewReceipt = (receiptId: number) => {
 }
 
 const download = async (receiptNumber: string) => {
-  const response: ApiResult = await downloadReceipt(receiptNumber)  
+  const response: ApiResult = await downloadReceipt(receiptNumber)
 
-  if(response.success) {
-        Swal.fire({
+  if (response.success) {
+    Swal.fire({
       toast: true,
       position: 'top-end',
       icon: 'success',
@@ -145,7 +145,7 @@ const download = async (receiptNumber: string) => {
 }
 
 </script>
-<style>
+<style scoped>
 .offcanvas-custom {
   width: 600px !important;
 }
@@ -154,7 +154,7 @@ const download = async (receiptNumber: string) => {
   padding: 0.75rem 1rem !important;
   font-size: 0.85rem !important;
   border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   max-width: 280px !important;
 }
 

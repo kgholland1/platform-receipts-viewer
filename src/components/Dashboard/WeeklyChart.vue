@@ -56,8 +56,6 @@ import ThisWeekChart from "./ThisWeekChart.vue"
 
 const { weeklyReceiptCount } = storeToRefs(useDashboardStore())
 
-console.log("weeklyReceiptCount", weeklyReceiptCount)
-
 const totalRevenue = computed(() => 
   weeklyReceiptCount.value?.receiptTotal?.reduce((sum, total) => sum + total, 0) ?? 0
 )

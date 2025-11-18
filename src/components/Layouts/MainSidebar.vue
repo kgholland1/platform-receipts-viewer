@@ -17,7 +17,7 @@
           </router-link>
         </li>
         <li class="menu-item">
-          <router-link to="/report-list" class="menu-link">
+          <router-link to="/receipt-list" class="menu-link">
             <vue-feather
             type="clipboard"
             class="menu-icon tf-icons"
@@ -94,7 +94,7 @@
               type="help-circle"
               class="menu-icon tf-icons"
             ></vue-feather>
-            <span class="title">Dev</span>
+            <span class="title">FAQ</span>
           </router-link>
         </li>
       </ul>
