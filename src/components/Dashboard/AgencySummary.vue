@@ -1,7 +1,7 @@
 <template>
   <div
     class="card border-0 box-shadow border-radius-10 mb-4 transaction browser-stats"
-    style="height: 32vh;"
+    style="height: 31vh;"
   >
     <div class="card-body p-4 mb-4">
       <div

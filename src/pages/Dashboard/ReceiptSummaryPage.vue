@@ -34,6 +34,6 @@ const { dashboardSummary } = useDashboardStore()
 const { error } = storeToRefs(useDashboardStore())
 
 dashboardSummary()
-console.log(error)
+console.log(error.value)
 
 </script>

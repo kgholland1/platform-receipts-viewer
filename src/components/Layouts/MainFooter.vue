@@ -5,7 +5,7 @@
       <p class="fs-14">
         © <span class="text-primary">E-GCR</span> is developed by
         <a
-          href="https://envytheme.com/"
+          href="https://paqtechnologies.com/"
           target="_blank"
           class="text-decoration-none"
         >

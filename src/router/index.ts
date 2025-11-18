@@ -26,7 +26,7 @@ const routes = [
     meta: { requiresAuth: true }
   },
   {
-    path: "/report-list",
+    path: "/receipt-list",
     name: "ReportList",
     component: ReportManagementPage,
   },
