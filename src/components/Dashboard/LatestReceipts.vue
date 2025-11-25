@@ -58,13 +58,13 @@
                   </button>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="javascript:;" @click="viewReceipt(doc.id)">
+                      <a class="dropdown-item d-flex align-items-center"  href="javascript:;" @click="viewReceipt(doc.id)">
                         <vue-feather type="eye"></vue-feather>
                         View
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="javascript:;" @click="download(doc.receiptNumber)">
+                      <a class="dropdown-item d-flex align-items-center" href="javascript:;" @click="download(doc.receiptNumber)">
                         <vue-feather type="printer"></vue-feather>
                         Download
                       </a>
@@ -104,7 +104,7 @@ import { ref } from "vue"
 import { useDashboardStore } from '@/stores/dashboard'
 import { useReceiptStore } from '@/stores/receipt'
 import { storeToRefs } from "pinia"
-import formatDate from "@/utils/helper"
+import { formatDate } from "@/utils/helper"
 import ReceiptDetail from "@/components/Receipt/ReceiptDetail.vue"
 import type { Receipt } from "@/types/receipt"
 import type { ApiResult } from "@/types/auth"
