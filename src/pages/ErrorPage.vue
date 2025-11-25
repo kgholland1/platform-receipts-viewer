@@ -9,10 +9,9 @@
               class="mb-4"
               alt="starter-img"
             />
-            <h3 class="fs-30 fw-medium mb-1">Page Not Found</h3>
+            <h3 class="fs-30 fw-medium mb-1">Not Found</h3>
             <p class="text-body mb-4">
-              But no worries! Our team is looking ever where while you wait
-              safely.
+              Sorry, what you are looking for cannot be found.
             </p>
             <router-link
               to="/"

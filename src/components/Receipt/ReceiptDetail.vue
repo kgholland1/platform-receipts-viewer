@@ -83,10 +83,10 @@ const formatDate = (dateString: string) => {
 const { downloadReceipt } = useReceiptStore()
 
 const download = async (receiptNumber: string) => {
-  const response: ApiResult = await downloadReceipt(receiptNumber)  
+  const response: ApiResult = await downloadReceipt(receiptNumber)
 
-  if(response.success) {
-        Swal.fire({
+  if (response.success) {
+    Swal.fire({
       toast: true,
       position: 'top-end',
       icon: 'success',
@@ -113,7 +113,7 @@ const download = async (receiptNumber: string) => {
   padding: 0.75rem 1rem !important;
   font-size: 0.85rem !important;
   border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   max-width: 280px !important;
 }
 

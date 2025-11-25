@@ -5,7 +5,7 @@ export const useLoaderStore = defineStore('loader', () => {
   const activeRequests = ref(0)
   const isLoading = ref(false)
   let loaderTimer: ReturnType<typeof setTimeout> | null = null
-  const delay = 200 // ms delay before showing loader
+  const delay = 350 
 
   function startRequest() {
     activeRequests.value++

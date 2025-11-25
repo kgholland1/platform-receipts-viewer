@@ -83,13 +83,13 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    <div class="flex-shrink-0">
+                    <!-- <div class="flex-shrink-0">
                       <img
                         class="rounded-circle"
                         src="../../assets/images/user/user-1.jpg"
                         alt="user-1"
                       />
-                    </div>
+                    </div> -->
                     <div class="flex-grow-1 ms-3">
                       <div
                         class="d-flex align-items-center justify-content-between"

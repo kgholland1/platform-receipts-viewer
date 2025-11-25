@@ -11,3 +11,12 @@ export type Profile = {
 export type ApiResult = {
   success: boolean
 }
+
+export type UserAgency = {
+  name: string,
+  ministry: string,
+  emailAddress?: string,
+  contactNumber?: string,
+  prefix: string
+}
+

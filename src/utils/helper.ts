@@ -1,4 +1,4 @@
-  const formatDate = (isoString: string) => {
+  export const formatDate = (isoString: string) => {
     if (!isoString) return "";
     const d = new Date(isoString);
     if (Number.isNaN(d.getTime())) return isoString;
@@ -9,6 +9,16 @@
 
     return `${day}/${m}/${y}`;
   }
-  
-  export default formatDate
+
+  export const formatLongDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('en-GB', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  })
+}
   
