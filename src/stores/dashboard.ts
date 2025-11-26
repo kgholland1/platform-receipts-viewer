@@ -56,10 +56,6 @@ export const useDashboardStore = defineStore("dashboard", () => {
       agencyReceiptCount.value = agencyResponse.data;
       latestReceipts.value = latestResponse.data;
 
-      console.log("DAILY_TOTALS", JSON.stringify(dailyReceiptCount.value));
-      console.log("WEEKLY_TOTALS", JSON.stringify(weeklyReceiptCount.value));
-      console.log("AGENCY_TOTALS", JSON.stringify(agencyReceiptCount.value));
-      console.log("LATEST_RECEIPTS", JSON.stringify(latestReceipts.value));
     } catch (err) {
       error.value =
         err instanceof Error ? err : new Error("Unknown error occurred");

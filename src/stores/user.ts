@@ -1,6 +1,6 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
-import { authApi } from "@/plugins/axios";
+import { authApi, mdaApi } from "@/plugins/axios";
 import type { CustomAxiosRequestConfig } from "@/plugins/axios";
 import type { ApiResult } from "@/types/auth";
 import type {
@@ -8,6 +8,7 @@ import type {
   AddUser,
   UserProfile,
   UserChangePassword,
+  ReceiptPayload
 } from "@/types/user";
 
 export const useUserStore = defineStore("user", () => {
@@ -137,7 +138,34 @@ export const useUserStore = defineStore("user", () => {
     } catch (err) {
       error.value =
         err instanceof Error ? err : "Failed to change the password";
-      console.log("ERROR***", error.value)
+      return { success: false };
+    }
+  };
+
+    const requestReceipt = async (receiptDetails: ReceiptPayload): Promise<ApiResult> => {
+    try {
+      error.value = null;
+      const response = await mdaApi.post(
+        "/v1/payment-platform/receipts/createreceiptonly",
+        receiptDetails,
+        {
+          showLoader: true,
+          keyRequest: true,
+        } as CustomAxiosRequestConfig
+      );
+
+      if (response.status === 201) {
+        return { success: true };
+      }
+      return { success: false };
+    } catch (err) {
+      if (Array.isArray(err)) {
+        error.value = err;
+        return { success: false };
+      }
+
+      error.value =
+        err instanceof Error ? err : new Error("Failed to request receipt");
       return { success: false };
     }
   };
@@ -151,5 +179,6 @@ export const useUserStore = defineStore("user", () => {
     deleteUser,
     fetchProfile,
     changePassword,
+    requestReceipt
   };
 });

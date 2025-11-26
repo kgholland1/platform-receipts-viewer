@@ -34,3 +34,14 @@ export type UserChangePassword = {
   currentPassword: string,
   newPassword: string
 }
+
+export type ReceiptPayload = {
+  agencyUniqueReference: string,
+  receiptDescription: string,
+  recipientName: string,
+  recipientPhone: string,
+  recipientEmail: string,
+  amount: number,
+  receiptType: string,
+  receivedBy: string
+}
