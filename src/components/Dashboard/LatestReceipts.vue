@@ -5,7 +5,7 @@
         <h3 class="fw-medium fs-18 mb-0">Recent Receipts</h3>
       </div>
 
-      <div v-if="!!latestReceipts.length" class="all-table scroll-bar h-524">
+      <div v-if="!!latestReceipts.length" class="all-table scroll-bar h-524 mb-5">
         <table class="table align-middle mb-0">
           <thead>
             <tr>

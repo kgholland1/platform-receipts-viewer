@@ -23,7 +23,7 @@
                 />
               </div>
               <div class="form-group mb-4">
-                <label class="label">Your Password</label>
+                <label class="label">Password</label>
                 <div class="password-wrapper position-relative">
                   <input
                     :type="showPassword ? 'text' : 'password'"

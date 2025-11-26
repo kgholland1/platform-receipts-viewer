@@ -19,6 +19,7 @@ const showErrorToast = (title: string) => {
 export interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
   showLoader?: boolean;
   skipAuthRedirect?: boolean;
+  keyRequest?: boolean;
   responseType?: InternalAxiosRequestConfig["responseType"];
 }
 
@@ -41,9 +42,15 @@ const createAxiosInstance = (baseURL: string): AxiosInstance => {
       const loaderStore = useLoaderStore();
       const authStore = useAuthStore();
 
-      if (authStore.token) {
-        config.headers.Authorization = `Bearer ${authStore.token}`;
+      if (config.keyRequest) {
+        config.headers["Content-Type"] = "application/json";
+        config.headers["X-Api-Key"] = process.env.VUE_APP_API_KEY as string;
+      } else {
+        if (authStore.token) {
+          config.headers.Authorization = `Bearer ${authStore.token}`;
+        }
       }
+
       if (config.showLoader !== false) {
         loaderStore.startRequest();
       }
@@ -84,7 +91,7 @@ const createAxiosInstance = (baseURL: string): AxiosInstance => {
             }
             throw modelStateErrors.flat();
           } else {
-            showErrorToast(`${error.error}`)
+            showErrorToast(`${error.error}`);
           }
           break;
         case 401:
@@ -97,10 +104,12 @@ const createAxiosInstance = (baseURL: string): AxiosInstance => {
           routerInstance?.push("/not-found");
           break;
         case 500:
-          showErrorToast(`${error.error}`)
+          showErrorToast(`${error.error}`);
           break;
         default:
-          showErrorToast(`Connection issue detected. Please verify your internet connection.`)
+          showErrorToast(
+            `Connection issue detected. Please verify your internet connection.`
+          );
           break;
       }
       return Promise.reject(error);
@@ -110,7 +119,7 @@ const createAxiosInstance = (baseURL: string): AxiosInstance => {
   return instance;
 };
 
-export const authApi = createAxiosInstance("http://localhost:51044");
-export const mdaApi = createAxiosInstance("http://localhost:51045");
+export const authApi = createAxiosInstance(process.env.VUE_APP_CLIENT_URL);
+export const mdaApi = createAxiosInstance(process.env.VUE_APP_MDA_URL);
 
 export default authApi;
