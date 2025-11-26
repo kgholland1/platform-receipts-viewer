@@ -8,7 +8,7 @@ import type {
   AddUser,
   UserProfile,
   UserChangePassword,
-  ReceiptPayload
+  ReceiptPayload,
 } from "@/types/user";
 
 export const useUserStore = defineStore("user", () => {
@@ -142,7 +142,10 @@ export const useUserStore = defineStore("user", () => {
     }
   };
 
-    const requestReceipt = async (receiptDetails: ReceiptPayload): Promise<ApiResult> => {
+  const requestReceipt = async (
+    receiptDetails: ReceiptPayload
+  ): Promise<ApiResult> => {
+    // calling mda api
     try {
       error.value = null;
       const response = await mdaApi.post(
@@ -179,6 +182,6 @@ export const useUserStore = defineStore("user", () => {
     deleteUser,
     fetchProfile,
     changePassword,
-    requestReceipt
+    requestReceipt,
   };
 });
