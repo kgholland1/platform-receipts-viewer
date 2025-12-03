@@ -18,7 +18,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="example@gmail.com"
+                  placeholder=""
                   v-model="state.email"
                 />
               </div>
@@ -29,7 +29,7 @@
                     :type="showPassword ? 'text' : 'password'"
                     id="password"
                     class="form-control"
-                    placeholder="***********"
+                    placeholder=""
                     v-model="state.password"
                   />
                   <i

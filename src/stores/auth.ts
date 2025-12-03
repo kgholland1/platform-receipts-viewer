@@ -5,6 +5,7 @@ import type {
   UserCredentials,
   Profile,
   UserAgency,
+  ForgotPassword
 } from "@/types/auth";
 import type { CustomAxiosRequestConfig } from "@/plugins/axios";
 import { authApi } from "@/plugins/axios";
@@ -15,6 +16,7 @@ export const useAuthStore = defineStore("auth", () => {
   const headerProfile = ref<Profile>({ fullName: "", role: "Admin" });
   const error = ref<string | null>(null);
   const userAgency = ref<UserAgency | null>(null);
+const isSuperAdmin = ref<boolean>(false);
 
   const initAuth = () => {
     const storedToken = localStorage.getItem("gcr-token");
@@ -27,12 +29,14 @@ export const useAuthStore = defineStore("auth", () => {
       isAuthenticated.value = JSON.parse(storedAuth);
       headerProfile.value = JSON.parse(storedProfile) as Profile;
       userAgency.value = JSON.parse(storedAgency) as UserAgency;
+      isSuperAdmin.value = headerProfile.value.role === "SuperAdmin"
     }
   };
 
   const setToken = (newToken: string) => {
     token.value = newToken;
     isAuthenticated.value = true;
+    isSuperAdmin.value = headerProfile.value.role === "SuperAdmin"
     localStorage.setItem("gcr-token", newToken);
     localStorage.setItem("gcr-userId", JSON.stringify(true));
     localStorage.setItem("gcr-profile", JSON.stringify(headerProfile.value));
@@ -42,6 +46,7 @@ export const useAuthStore = defineStore("auth", () => {
   const clearToken = () => {
     token.value = null;
     isAuthenticated.value = false;
+    isSuperAdmin.value = false;
     localStorage.removeItem("gcr-token");
     localStorage.removeItem("gcr-userId");
     localStorage.removeItem("gcr-profile");
@@ -77,15 +82,40 @@ export const useAuthStore = defineStore("auth", () => {
     }
   };
 
+    const forgotPassword = async (email: ForgotPassword): Promise<ApiResult> => {
+    try {
+      error.value = null;
+      const response = await authApi.put(
+        "/api/auth/forgotPassword",
+        email,
+        {
+          showLoader: false,
+          skipAuthRedirect: true,
+        } as CustomAxiosRequestConfig
+      );
+
+      if (response.status === 204) {
+        return { success: true };
+      }
+      error.value = "The Email provided is not registered.";
+      return { success: false };
+    } catch {
+      error.value = "The Email provided is not registered.";
+      return { success: false };
+    }
+  };
+
   return {
     token,
     isAuthenticated,
     headerProfile,
     userAgency,
     error,
+    isSuperAdmin,
     initAuth,
     setToken,
     clearToken,
     signIn,
+     forgotPassword
   };
 });

@@ -50,7 +50,7 @@
       </table>
     </div>
   </div>
-  <div class="form-group my-4">
+  <div  v-if="isSuperAdmin" class="form-group my-4">
     <button type="submit" class="default-btn w-100 d-block" @click="download(receiptData.receiptNumber)">
       Download Receipt
     </button>
@@ -60,6 +60,8 @@
 import { defineProps } from 'vue'
 import type { Receipt } from "@/types/receipt"
 import { useReceiptStore } from '@/stores/receipt'
+import { useAuthStore } from '@/stores/auth'
+import { storeToRefs } from "pinia"
 import type { ApiResult } from "@/types/auth"
 import Swal from "sweetalert2"
 import 'sweetalert2/src/sweetalert2.scss'
@@ -67,6 +69,8 @@ import 'sweetalert2/src/sweetalert2.scss'
 defineProps<{
   receiptData: Receipt
 }>()
+
+const { isSuperAdmin } = storeToRefs(useAuthStore())
 
 const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-GB', {

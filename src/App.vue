@@ -1,7 +1,7 @@
 <template>
   <PreLoader v-if="isPreLoading" />
   <GlobalLoader v-model="loaderStore.isLoading" :backdropClosable="false">
-    Loading data…
+     Please wait while we process your request…
   </GlobalLoader>
 
   <MainHeader v-if="isAuthenticated" />
