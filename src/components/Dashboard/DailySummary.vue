@@ -1,6 +1,6 @@
 <template>
-  <div class="row justify-content-center">
-    <div class="col-xxl-4 col-sm-6">
+  <div class="row justify-content-left">
+    <div :class="columnClasses">
       <div class="card border-0 box-shadow border-radius-10 mb-4">
         <div class="card-body p-2">
           <div class="d-flex align-items-center">
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xxl-4 col-sm-6">
+    <div :class="columnClasses">
       <div class="card border-0 box-shadow border-radius-10 mb-4">
         <div class="card-body p-2">
           <div class="d-flex align-items-center">
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xxl-4 col-sm-6">
+    <div v-if="isSuperAdmin" :class="columnClasses">
       <div class="card border-0 box-shadow border-radius-10 mb-4">
         <div class="card-body p-2">
           <div class="d-flex align-items-center">
@@ -54,8 +54,17 @@
   </div>
 </template>
 <script setup lang="ts">
+import { computed } from "vue"
 import { useDashboardStore } from '@/stores/dashboard'
+import { useAuthStore } from '@/stores/auth'
 import { storeToRefs } from "pinia"
 
 const { dailyReceiptCount } = storeToRefs(useDashboardStore())
+const { isSuperAdmin } = storeToRefs(useAuthStore())
+
+const columnClasses = computed(() => {
+  return isSuperAdmin.value 
+    ? 'col-xxl-4 col-sm-6' 
+    : 'col-xxl-6 col-sm-6'
+})
 </script>

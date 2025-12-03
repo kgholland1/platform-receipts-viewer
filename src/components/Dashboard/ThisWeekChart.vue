@@ -1,14 +1,9 @@
 <template>
-  <apexchart
-    type="line"
-    height="300"
-    :options="revenueChart"
-    :series="revenue"
-  ></apexchart>
+  <apexchart type="line" height="300" :options="revenueChart" :series="revenue"></apexchart>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed, onMounted, nextTick } from 'vue'
 import type { ApexOptions } from 'apexcharts'
 
 interface Props {
@@ -21,6 +16,13 @@ const props = withDefaults(defineProps<Props>(), {
   categories: () => []
 })
 
+const chartReady = ref(false)
+
+onMounted(async () => {
+  await nextTick()
+  chartReady.value = true
+})
+
 // Convert data() to reactive refs/computed
 const revenue = computed(() => [
   {
@@ -31,6 +33,15 @@ const revenue = computed(() => [
 
 const revenueChart = computed<ApexOptions>(() => ({
   chart: {
+    animations: {
+      enabled: true,
+      dynamicAnimation: {
+        enabled: true,
+        speed: 350
+      }
+    },
+    redrawOnParentResize: true,
+    redrawOnWindowResize: true,
     height: 300,
     type: "line",
     zoom: {

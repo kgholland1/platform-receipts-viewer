@@ -22,7 +22,7 @@
               <h6 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
-                  01. Demo - fill the Receipt details.
+                  01. Demo and Health Check.
                 </button>
               </h6>
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -33,6 +33,7 @@
                       {{ err }}
                     </div>
                   </div>
+                  <p>Please enter the necessary information for the receipt payload.</p>
                   <form>
                     <div class="form-group mb-4">
                       <label class="label">Agency Reference</label>
@@ -80,24 +81,14 @@
               <h6 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  02. What is Site Plan Approval?
+                  02. Can a PSP submit an e-GCR request on behalf of an MDA?
                 </button>
               </h6>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <p class="fs-14" style="line-height: 25px">
-                    Sed porttitor lectus nibh. Donec rutrum congue leo eget
-                    malesuada. Vivamus magna justo, lacinia eget consectetur
-                    sed, convallis at tellus. Praesent sapien massa, convallis a
-                    pellentesque nec, egestas non nisi. Sed porttitor lectus
-                    nibh. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Tempora, nihil! Ex molestiae eaque eius fuga quibusdam
-                    quisquam odio tempora quia, vel expedita quae sint, illo
-                    consequatur magni commodi rerum quam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Eligendi et reprehenderit
-                    minima molestiae, iusto ipsa a cupiditate sed, ullam nulla
-                    repellat! Voluptate soluta delectus architecto iure, vel
-                    magnam odio nostrum.
+                    Yes. A PSP may submit a request on an MDA’s behalf, provided the PSP has the appropriate authorisation
+                    and is already processing fees for that MDA.
                   </p>
                 </div>
               </div>
@@ -107,24 +98,14 @@
               <h6 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  03. What does Property Valuation mean?
+                  03. How do I define the payload for an MDA?
                 </button>
               </h6>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <p class="fs-14" style="line-height: 25px">
-                    Sed porttitor lectus nibh. Donec rutrum congue leo eget
-                    malesuada. Vivamus magna justo, lacinia eget consectetur
-                    sed, convallis at tellus. Praesent sapien massa, convallis a
-                    pellentesque nec, egestas non nisi. Sed porttitor lectus
-                    nibh. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Tempora, nihil! Ex molestiae eaque eius fuga quibusdam
-                    quisquam odio tempora quia, vel expedita quae sint, illo
-                    consequatur magni commodi rerum quam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Eligendi et reprehenderit
-                    minima molestiae, iusto ipsa a cupiditate sed, ullam nulla
-                    repellat! Voluptate soluta delectus architecto iure, vel
-                    magnam odio nostrum.
+                    Please refer to the Swagger documentation provided for the full payload structure and field
+                    descriptions.
                   </p>
                 </div>
               </div>
@@ -134,24 +115,15 @@
               <h6 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                  04. What is a Land Use Permit?
+                  04. How do I know which receipt type to use for an MDA?
                 </button>
               </h6>
               <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <p class="fs-14" style="line-height: 25px">
-                    Sed porttitor lectus nibh. Donec rutrum congue leo eget
-                    malesuada. Vivamus magna justo, lacinia eget consectetur
-                    sed, convallis at tellus. Praesent sapien massa, convallis a
-                    pellentesque nec, egestas non nisi. Sed porttitor lectus
-                    nibh. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Tempora, nihil! Ex molestiae eaque eius fuga quibusdam
-                    quisquam odio tempora quia, vel expedita quae sint, illo
-                    consequatur magni commodi rerum quam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Eligendi et reprehenderit
-                    minima molestiae, iusto ipsa a cupiditate sed, ullam nulla
-                    repellat! Voluptate soluta delectus architecto iure, vel
-                    magnam odio nostrum.
+                    To find the correct receipt type, go to Settings > Agency Settings. There, you will see a
+                    comprehensive list of all MDAs
+                    for which you are authorised to request an e-GCR on their behalf.
                   </p>
                 </div>
               </div>
@@ -160,50 +132,13 @@
               <h6 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                  05. What is Boundary Demarcation?
+                  05. Technical Enquiries and Support
                 </button>
               </h6>
               <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <p class="fs-14" style="line-height: 25px">
-                    Sed porttitor lectus nibh. Donec rutrum congue leo eget
-                    malesuada. Vivamus magna justo, lacinia eget consectetur
-                    sed, convallis at tellus. Praesent sapien massa, convallis a
-                    pellentesque nec, egestas non nisi. Sed porttitor lectus
-                    nibh. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Tempora, nihil! Ex molestiae eaque eius fuga quibusdam
-                    quisquam odio tempora quia, vel expedita quae sint, illo
-                    consequatur magni commodi rerum quam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Eligendi et reprehenderit
-                    minima molestiae, iusto ipsa a cupiditate sed, ullam nulla
-                    repellat! Voluptate soluta delectus architecto iure, vel
-                    magnam odio nostrum.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h6 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6e">
-                  06. How is a Land Lease Renewal?
-                </button>
-              </h6>
-              <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <p class="fs-14" style="line-height: 25px">
-                    Sed porttitor lectus nibh. Donec rutrum congue leo eget
-                    malesuada. Vivamus magna justo, lacinia eget consectetur
-                    sed, convallis at tellus. Praesent sapien massa, convallis a
-                    pellentesque nec, egestas non nisi. Sed porttitor lectus
-                    nibh. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Tempora, nihil! Ex molestiae eaque eius fuga quibusdam
-                    quisquam odio tempora quia, vel expedita quae sint, illo
-                    consequatur magni commodi rerum quam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Eligendi et reprehenderit
-                    minima molestiae, iusto ipsa a cupiditate sed, ullam nulla
-                    repellat! Voluptate soluta delectus architecto iure, vel
-                    magnam odio nostrum.
+                    For any technical enquiries or support requests, please contact PAQ Technologies.
                   </p>
                 </div>
               </div>
